@@ -21,10 +21,10 @@ const styles = (theme) => ({
     height: "35px",
     borderBottom: "1px solid black",
     borderRadius: "0px",
-    backgroundColor: "#29487d",
+    backgroundColor: "#29847d",
     color: "white",
     "&:hover": {
-      backgroundColor: "#88a2ce",
+      backgroundColor: "#59918d",
     },
   },
   sidebarContainer: {
