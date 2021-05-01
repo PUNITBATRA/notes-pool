@@ -52,6 +52,7 @@ class Sidebar extends React.Component {
               <Button
                 className={classes.newNoteSubmitBtn}
                 onClick={this.newNote}
+                disabled={!this.state.title}
               >
                 Submit Note
               </Button>

@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Sidebar from "./sidebar/sidebar";
 import Editor from "./editor/editor";
+
 import firebase from "firebase";
 require("firebase/firestore");
 
@@ -25,6 +26,7 @@ class App extends React.Component {
           return data;
         });
         console.log(notes);
+        // console.log(e.target.value);
         this.setState({ notes: notes });
       });
   };
@@ -82,6 +84,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
+        <h1 style={{ textAlign: "center" }}>Notes-Pool</h1>
+        <p style={{ textAlign: "center" }}>
+          Create Your To-Do notes here dynamically and we will save them for
+          you. Once it's done don't forget to click on Trash Icon.
+        </p>
+
         <Sidebar
           notes={this.state.notes}
           selectedNoteIndex={this.state.selectedNoteIndex}
@@ -98,6 +106,7 @@ class App extends React.Component {
           />
         ) : null}
       </div>
+      // </div>
     );
   }
 }
